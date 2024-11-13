@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: auto;
+    min-height: 100vh;
+    background-color: darkseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 50px;
+}
+
+.calcBox{
+    width: 30%;
+    min-height: fit-content;
+    border-radius: 20px;
+    background-color: rgb(218, 218, 218);
+    box-shadow: rgba(233, 233, 233, 0.534) 0px 30px 60px -12px inset, rgba(235, 235, 235, 0.3) 0px 18px 36px -18px inset;
+}
+
+.modeBox{
+    width: auto;
+    height: 10vh;
+    background-color: none;
+    display: flex;
+    border-radius: 10px 10px 0px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modes{
+    width: 30%;
+    height: 7vh;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.modes img{
+    width: 20px;
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(116, 116, 116, 0.685));
+}
+
+.screenBox{
+    width: auto;
+    height: 20vh;
+}
+
+#inputScreen{
+    width: auto;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(95, 95, 95);
+    gap: 5px;
+
+}
+
+#inputvalue{
+    color: black;
+    font-size: 40px;
+}
+
+.control{
+    width: auto;
+    height: 7vh;
+    background-color: aquamarine;
+    margin-bottom: 3%;
+}
+
+.buttonBox{
+    width: auto;
+    height: fit-content;
+    background-color: white;
+    border-radius: 20px 20px 10px 10px;
+    padding: 10px 10px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.buttons{
+    width: auto;
+    height: fit-content;
+    background-color: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+    gap: 10px;
+}
+
+.btn{
+    width: 22%;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(192, 192, 192, 0.836);
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px 30px;
+    box-shadow: rgba(206, 206, 206, 0.17) 0px -23px 25px 0px inset, rgba(211, 206, 206, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+@media (max-width: 500px) {
+    .calcBox{
+        width: 97%;
+    }
+    .modes{
+        width: 35%;
+        height: 5vh;
+    }
+}
