@@ -1,3 +1,5 @@
+
+
 // Getting elements from dom
 
 const buttons = document.querySelectorAll(".btn");
@@ -38,3 +40,35 @@ buttons.forEach(button => {
         }
     })
 });
+
+
+//----------------------------------------------------------------------------------------------------------
+// ---------------------------------- LOCAL STORAGE CONTROL MECHANISM --------------------------------------
+//----------------------------------------------------------------------------------------------------------
+
+const saveData = () =>{
+    let count = localStorage.length;
+    let dt = new Date();
+
+    let data = {
+        date:`${dt.getDate()}-${dt.getMonth()}-${dt.getFullYear()}`,
+        epx: inScreen.innerText,
+        result:outScreen.innerText,
+    };
+
+    localStorage.setItem(`${count}`, JSON.stringify(data));
+}
+
+// Getting the storage control buttons from dom
+
+const controlBtns = document.querySelectorAll(".controlBtn");
+controlBtns.forEach(controlBtn => {
+    controlBtn.addEventListener("click", (e)=>{
+        if(e.target.alt == 'save' && inScreen.innerText != ""){
+            console.log('true');
+            saveData();                 // Saving is taking place
+            console.log(JSON.parse(localStorage.getItem(0)));
+        }
+    });
+});
+

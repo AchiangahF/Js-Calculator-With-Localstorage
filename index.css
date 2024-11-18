@@ -7,7 +7,7 @@
 .main{
     width: auto;
     min-height: 100vh;
-    background-color: darkseagreen;
+    background-color: rgba(145, 165, 145, 0.801);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@
 .calcBox{
     width: 30%;
     min-height: fit-content;
-    border-radius: 20px;
+    border-radius: 7px;
     background-color: rgb(218, 218, 218);
     box-shadow: rgba(233, 233, 233, 0.534) 0px 30px 60px -12px inset, rgba(235, 235, 235, 0.3) 0px 18px 36px -18px inset;
 }
@@ -76,15 +76,33 @@
 .control{
     width: auto;
     height: 7vh;
-    background-color: aquamarine;
+    background-color: none;
     margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
+
+.control button{
+    width: 15%;
+    height: 4vh;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.control img{
+    width: 35%;
+    background-color: none;
+}
+
 
 .buttonBox{
     width: auto;
     height: fit-content;
     background-color: white;
-    border-radius: 20px 20px 10px 10px;
+    border-radius: 30px 30px 10px 10px;
     padding: 10px 10px 0px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
