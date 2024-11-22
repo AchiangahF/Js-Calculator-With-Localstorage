@@ -23,7 +23,7 @@ let Evalaute = (str) =>{
         }
     }
     catch(e){
-        console.log(`Error: ${e}`);
+        //console.log(`Error: ${e}`);
     }
 }
 
@@ -46,6 +46,8 @@ buttons.forEach(button => {
 // ---------------------------------- LOCAL STORAGE CONTROL MECHANISM --------------------------------------
 //----------------------------------------------------------------------------------------------------------
 
+let calculatorStorage = [];
+
 const saveData = () =>{
     let count = localStorage.length;
     let dt = new Date();
@@ -56,7 +58,16 @@ const saveData = () =>{
         result:outScreen.innerText,
     };
 
-    localStorage.setItem(`${count}`, JSON.stringify(data));
+    if(localStorage.length == 0){
+        calculatorStorage.push(data);
+        localStorage.setItem(`calStore`, JSON.stringify(calculatorStorage));
+    }
+    else{
+        let oldStorage = JSON.parse(localStorage.getItem('calStore'));
+        let newStorage = [data, ...oldStorage];
+        localStorage.removeItem('calStore');
+        localStorage.setItem('calStore', JSON.stringify(newStorage));
+    }
 }
 
 // Getting the storage control buttons from dom
@@ -67,8 +78,7 @@ controlBtns.forEach(controlBtn => {
         if(e.target.alt == 'save' && inScreen.innerText != ""){
             console.log('true');
             saveData();                 // Saving is taking place
-            console.log(JSON.parse(localStorage.getItem(0)));
+            console.log(JSON.parse(localStorage.getItem('calStore')));
         }
     });
 });
-
